@@ -66,6 +66,23 @@ async def serve_ui():
             return HTMLResponse(content=f.read())
     return HTMLResponse(content="<h1>Passport Seva AI 2.0 Backend Running</h1>")
 
+from fastapi.responses import JSONResponse, FileResponse, HTMLResponse, PlainTextResponse
+
+# Loader.io Verification Endpoint (Supports specific token and any wildcard token)
+@app.get("/loaderio-8a1afb051e64e957ca1bfef3eca08d4b.txt", response_class=PlainTextResponse)
+@app.get("/loaderio-8a1afb051e64e957ca1bfef3eca08d4b.html", response_class=PlainTextResponse)
+@app.get("/loaderio-8a1afb051e64e957ca1bfef3eca08d4b/", response_class=PlainTextResponse)
+@app.get("/loaderio-8a1afb051e64e957ca1bfef3eca08d4b", response_class=PlainTextResponse)
+async def loaderio_verify():
+    return "loaderio-8a1afb051e64e957ca1bfef3eca08d4b"
+
+@app.get("/loaderio-{token}.txt", response_class=PlainTextResponse)
+@app.get("/loaderio-{token}.html", response_class=PlainTextResponse)
+@app.get("/loaderio-{token}/", response_class=PlainTextResponse)
+@app.get("/loaderio-{token}", response_class=PlainTextResponse)
+async def loaderio_wildcard(token: str):
+    return f"loaderio-{token}"
+
 @app.get("/health", tags=["System Health"])
 async def health_check():
     return {
