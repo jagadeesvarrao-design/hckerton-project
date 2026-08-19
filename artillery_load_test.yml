@@ -1,0 +1,149 @@
+config:
+  target: "http://127.0.0.1:8099"
+  phases:
+    - name: "Phase 1: Warm-up"
+      duration: 10
+      arrivalRate: 10
+    - name: "Phase 2: Ramp-up (High Load)"
+      duration: 20
+      arrivalRate: 20
+      rampTo: 80
+    - name: "Phase 3: Sustained Peak Citizen Concurrency"
+      duration: 30
+      arrivalRate: 100
+  plugins:
+    ensure: {}
+  ensure:
+    p95: 500
+    maxErrorRate: 1
+
+scenarios:
+  - name: "Citizen User Flow 1: Slot Radar & Atomic Reservation"
+    weight: 35
+    flow:
+      - get:
+          url: "/"
+      - post:
+          url: "/api/v1/slots/search"
+          json:
+            city_or_pincode: "Delhi"
+            service_type: "normal"
+          capture:
+            - json: "$[0].center_id"
+              as: "centerId"
+            - json: "$[0].earliest_date"
+              as: "earliestDate"
+      - post:
+          url: "/api/v1/slots/hold"
+          json:
+            center_id: "{{ centerId }}"
+            appointment_date: "{{ earliestDate }}"
+            appointment_time: "11:30 AM"
+            scheme: "normal"
+            applicant_id: "CITIZEN_LOADTEST_01"
+
+  - name: "Citizen User Flow 2: Zero-Rejection AI Document Auditor"
+    weight: 25
+    flow:
+      - post:
+          url: "/api/v1/audit/verify"
+          json:
+            target_service: "fresh"
+            documents:
+              - document_type: "aadhaar"
+                extracted_name: "SAGAR SHARMA"
+                extracted_dob: "1998-05-15"
+                extracted_father_name: "SURESH SHARMA"
+                extracted_address: "Flat 402, Green Valley Apartments, New Delhi"
+                extracted_pincode: "110002"
+              - document_type: "10th_marksheet"
+                extracted_name: "SAGAR SHARMA"
+                extracted_dob: "1998-05-15"
+                extracted_father_name: "SURESH SHARMA"
+
+  - name: "Citizen User Flow 3: 100% MEA Form No. 1 Submission & ARN Generation"
+    weight: 20
+    flow:
+      - post:
+          url: "/api/v1/application/fresh/submit"
+          json:
+            applying_for: "Fresh Passport"
+            type_of_application: "Normal"
+            type_of_passport_booklet: "36 Pages"
+            validity_required: "10 Years"
+            given_name: "SAGAR"
+            surname: "SHARMA"
+            dob: "1998-05-15"
+            place_of_birth: "NEW DELHI"
+            district: "New Delhi"
+            state: "Delhi"
+            gender: "Male"
+            marital_status: "Single"
+            citizenship_by: "Birth"
+            employment_type: "Private"
+            educational_qualification: "10th Pass & Above"
+            father_given_name: "SURESH"
+            father_surname: "SHARMA"
+            mother_given_name: "SUNITA"
+            mother_surname: "SHARMA"
+            present_address_street: "Flat 402, Green Valley Apartments"
+            present_city: "New Delhi"
+            present_district: "New Delhi, Delhi"
+            present_police_station: "Tilak Marg Police Station"
+            present_pincode: "110002"
+            mobile_number: "9876543210"
+            email_id: "sagar.sharma@example.com"
+            emergency_contact_name: "Suresh Sharma"
+            emergency_contact_address: "Flat 402, Green Valley Apartments"
+            emergency_contact_mobile: "9812345678"
+            poa_document_type: "Aadhaar Card (UIDAI)"
+            poa_document_number: "XXXX-XXXX-1234"
+            dob_document_type: "Matriculation / 10th Standard Passing Certificate"
+            dob_document_number: "CBSE/10/2014/892019"
+            is_non_ecr_eligible: true
+            non_ecr_category: "Matriculation (10th Standard) and Above"
+            non_ecr_proof_document: "10th Standard Marksheet & Passing Certificate"
+            aadhaar_number: "XXXX-XXXX-1234"
+            pan_number: "ABCPS1234F"
+            voter_id_number: "DL0129384"
+            have_applied_before: false
+            criminal_proceedings_pending: false
+            warrant_or_summons_issued: false
+            convicted_by_court: false
+            passport_refused_or_denied_earlier: false
+            granted_political_asylum_abroad: false
+            returned_on_emergency_certificate: false
+            self_declaration_accepted: true
+
+  - name: "Citizen User Flow 4: Multilingual AI Copilot & Script Alignment"
+    weight: 10
+    flow:
+      - post:
+          url: "/api/v1/copilot/chat"
+          json:
+            message: "What is the fee for Tatkaal passport?"
+            conversation_id: "ARTILLERY_CONV_01"
+            language: "en"
+
+  - name: "Citizen User Flow 5: Fee Matrix & Legal Annexures Library"
+    weight: 10
+    flow:
+      - post:
+          url: "/api/v1/calculator/calculate"
+          json:
+            service: "fresh"
+            applicant_age_group: "adult"
+            scheme: "tatkaal"
+            booklet_pages: 60
+            validity_years: 10
+      - get:
+          url: "/api/v1/annexures/catalog"
+      - post:
+          url: "/api/v1/annexures/ANNEXURE_F/generate"
+          json:
+            applicant_name: "SAGAR SHARMA"
+            father_name: "SURESH SHARMA"
+            dob: "1998-05-15"
+            pob: "NEW DELHI"
+            address: "Flat 402, Green Valley Apartments, New Delhi"
+            police_station: "Tilak Marg Police Station"

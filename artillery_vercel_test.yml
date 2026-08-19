@@ -1,0 +1,55 @@
+config:
+  target: "https://hckerton-project.vercel.app"
+  phases:
+    - name: "Phase 1: Vercel Warm-up"
+      duration: 10
+      arrivalRate: 5
+    - name: "Phase 2: Ramp-up (High Concurrency)"
+      duration: 20
+      arrivalRate: 10
+      rampTo: 50
+    - name: "Phase 3: Sustained Peak Load"
+      duration: 20
+      arrivalRate: 60
+
+scenarios:
+  - name: "Vercel Citizen Flow: Slot Radar & Atomic Hold"
+    weight: 40
+    flow:
+      - get:
+          url: "/"
+      - post:
+          url: "/api/v1/slots/search"
+          json:
+            city_or_pincode: "Delhi"
+            service_type: "normal"
+
+  - name: "Vercel Citizen Flow: Zero-Rejection AI Document Auditor"
+    weight: 30
+    flow:
+      - post:
+          url: "/api/v1/audit/verify"
+          json:
+            target_service: "fresh"
+            documents:
+              - document_type: "aadhaar"
+                extracted_name: "SAGAR SHARMA"
+                extracted_dob: "1998-05-15"
+                extracted_father_name: "SURESH SHARMA"
+              - document_type: "10th_marksheet"
+                extracted_name: "SAGAR SHARMA"
+                extracted_dob: "1998-05-15"
+
+  - name: "Vercel Citizen Flow: Fee Matrix & Police Thana Finder"
+    weight: 30
+    flow:
+      - post:
+          url: "/api/v1/calculator/calculate"
+          json:
+            service: "fresh"
+            applicant_age_group: "adult"
+            scheme: "tatkaal"
+            booklet_pages: 36
+            validity_years: 10
+      - get:
+          url: "/api/v1/police-station/states"
