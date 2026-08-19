@@ -1,7 +1,7 @@
 import time
 import os
 from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi.responses import JSONResponse, FileResponse, HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -62,8 +62,9 @@ if os.path.exists(static_dir):
 async def serve_ui():
     index_path = os.path.join(os.path.dirname(__file__), "static", "index.html")
     if os.path.exists(index_path):
-        return FileResponse(index_path)
-    return {"message": "Passport Seva AI 2.0 Backend Running"}
+        with open(index_path, "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    return HTMLResponse(content="<h1>Passport Seva AI 2.0 Backend Running</h1>")
 
 @app.get("/health", tags=["System Health"])
 async def health_check():
