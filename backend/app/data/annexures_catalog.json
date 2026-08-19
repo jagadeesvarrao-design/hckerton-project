@@ -1,0 +1,92 @@
+{
+  "annexures": [
+    {
+      "code": "ANNEXURE_A",
+      "title": "Annexure 'A' — Identity Certificate for Government / PSU Employees",
+      "category": "Employment Verification",
+      "purpose": "Mandatory for Central/State Government, PSU, and Autonomous Body employees.",
+      "template": "This is to certify that Shri/Smt/Kum. {applicant_name} son/wife/daughter of Shri {father_name} who is an Indian citizen is an employee of this organization/office from {date_of_joining} and is currently holding the post of {designation}. There is no disciplinary or criminal proceeding pending against the applicant.",
+      "required_fields": ["applicant_name", "father_name", "date_of_joining", "designation", "office_name", "signing_authority_name", "signing_authority_designation"]
+    },
+    {
+      "code": "ANNEXURE_C",
+      "title": "Annexure 'C' — Declaration by Parent/Guardian for Minor (Single Parent Consent)",
+      "category": "Minor Application",
+      "purpose": "When one parent has not given consent or is untraceable / legally separated.",
+      "template": "I, {parent_name}, resident of {address} solemnly declare that I am the mother/father/guardian of minor child {child_name}. The other parent {other_parent_name} is unable to give consent due to {reason_for_no_consent}. I take full legal responsibility for the issuance of this passport.",
+      "required_fields": ["parent_name", "child_name", "other_parent_name", "address", "reason_for_no_consent"]
+    },
+    {
+      "code": "ANNEXURE_D",
+      "title": "Annexure 'D' — Standard Declaration of Parents for Minor Passport",
+      "category": "Minor Application",
+      "purpose": "Standard declaration signed by both parents/guardians for minor child's passport.",
+      "template": "We, {father_name} and {mother_name}, residing at {address} hereby solemnly declare that we are the biological parents of minor {child_name} born on {dob} at {pob}. We hereby grant full consent for issuance of an Indian Passport to our minor child.",
+      "required_fields": ["father_name", "mother_name", "child_name", "dob", "pob", "address", "father_passport_no", "mother_passport_no"]
+    },
+    {
+      "code": "ANNEXURE_E",
+      "title": "Annexure 'E' — Standard Self-Declaration for Tatkaal / Citizenship",
+      "category": "Tatkaal / Urgency",
+      "purpose": "Mandatory affidavit of Indian citizenship and no criminal record for all Tatkaal applications.",
+      "template": "I, {applicant_name}, son/daughter of Shri {father_name}, born on {dob} at {pob}, residing at {address} under police jurisdiction of {police_station}, hereby solemnly declare that: 1. I am a citizen of India. 2. I have not been convicted of any criminal offense. 3. There are no warrants or summons pending against me.",
+      "required_fields": ["applicant_name", "father_name", "dob", "pob", "address", "police_station"]
+    },
+    {
+      "code": "ANNEXURE_F",
+      "title": "Annexure 'F' — Specimen Affidavit for Lost / Damaged Passport",
+      "category": "Re-issue Lost/Damaged",
+      "purpose": "Affidavit describing circumstances of lost, stolen, or damaged passport with FIR copy.",
+      "template": "I, {applicant_name}, son/daughter of {father_name}, residing at {address}, declare on oath that my previous passport bearing number {lost_passport_no} issued on {issue_date} at {issue_place} was lost/damaged on {incident_date} under the following circumstances: {incident_description}. A formal police report was lodged at {police_station} under FIR No. {fir_no} dated {fir_date}.",
+      "required_fields": ["applicant_name", "father_name", "address", "lost_passport_no", "issue_date", "issue_place", "incident_date", "incident_description", "fir_no", "fir_date", "police_station"]
+    },
+    {
+      "code": "ANNEXURE_G",
+      "title": "Annexure 'G' — No Objection Certificate (NOC) for Govt / PSU Employees",
+      "category": "Government Employees",
+      "purpose": "NOC issued by Head of Department / Controlling Authority for foreign travel.",
+      "template": "The Ministry/Department/Office of {office_name} has No Objection to Shri/Smt {applicant_name}, working as {designation}, obtaining an ordinary Indian passport for private foreign travel.",
+      "required_fields": ["applicant_name", "designation", "office_name", "issuing_officer_name", "issuing_officer_designation"]
+    },
+    {
+      "code": "ANNEXURE_H",
+      "title": "Annexure 'H' — Prior Intimation (PI) Letter for Govt Employees",
+      "category": "Government Employees",
+      "purpose": "Prior formal intimation sent by employee to employer prior to passport application.",
+      "template": "To {controlling_authority}, {department_name}. Subject: Prior Intimation for applying for Indian Passport. I, {applicant_name}, working as {designation} in {office_name}, hereby inform that I am applying for an ordinary Indian Passport.",
+      "required_fields": ["applicant_name", "designation", "office_name", "department_name", "controlling_authority", "date_of_intimation"]
+    },
+    {
+      "code": "ANNEXURE_I",
+      "title": "Annexure 'I' — Declaration for Passport to Child Born via Surrogacy",
+      "category": "Special Scenarios",
+      "purpose": "Declaration by intending genetic parents for child born through surrogacy.",
+      "template": "We, {father_name} and {mother_name}, residing at {address}, declare that the minor child {child_name} born on {dob} was born through surrogacy in compliance with Indian surrogacy regulations and ART guidelines.",
+      "required_fields": ["father_name", "mother_name", "child_name", "dob", "clinic_name", "court_order_number"]
+    },
+    {
+      "code": "ANNEXURE_J",
+      "title": "Annexure 'J' — Joint Declaration in Lieu of Marriage Certificate",
+      "category": "Spouse Endorsement",
+      "purpose": "Affidavit by husband and wife declaring marriage without marriage certificate.",
+      "template": "We, {husband_name} and {wife_name}, solemnly declare that we were married on {marriage_date} at {marriage_place} according to {marriage_customs} customs. We are living together as husband and wife at {joint_address}.",
+      "required_fields": ["husband_name", "wife_name", "marriage_date", "marriage_place", "marriage_customs", "joint_address"]
+    },
+    {
+      "code": "ANNEXURE_K",
+      "title": "Annexure 'K' — Specimen Declaration for Change of Sex / Gender",
+      "category": "Particulars Change",
+      "purpose": "Declaration by applicant along with medical certificate for sex change in passport.",
+      "template": "I, {applicant_name}, residing at {address}, state that I have undergone gender transition surgery certified by {surgeon_name} of {hospital_name} on {surgery_date}, and request passport issuance under gender {new_gender}.",
+      "required_fields": ["applicant_name", "address", "new_gender", "surgeon_name", "hospital_name", "surgery_date"]
+    },
+    {
+      "code": "ANNEXURE_M",
+      "title": "Annexure 'M' — Revocation of Power of Attorney / Authority",
+      "category": "Legal Declarations",
+      "purpose": "Declaration revoking authority given to any representative for passport submission.",
+      "template": "I, {applicant_name}, hereby unconditionally revoke the authority previously granted to {agent_name} for my passport application file {file_no}.",
+      "required_fields": ["applicant_name", "agent_name", "file_no", "date_of_revocation"]
+    }
+  ]
+}

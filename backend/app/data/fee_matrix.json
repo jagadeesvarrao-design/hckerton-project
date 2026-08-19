@@ -1,0 +1,154 @@
+{
+  "currency": "INR",
+  "rules": [
+    {
+      "service": "fresh",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "validity_years": 10,
+      "scheme": "normal",
+      "amount": 1500,
+      "description": "Fresh Passport (Adult, 36 Pages, 10 Years Validity, Normal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "validity_years": 10,
+      "scheme": "tatkaal",
+      "amount": 3500,
+      "description": "Fresh Passport (Adult, 36 Pages, 10 Years Validity, Tatkaal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "adult",
+      "booklet_pages": 60,
+      "validity_years": 10,
+      "scheme": "normal",
+      "amount": 2000,
+      "description": "Fresh Passport (Adult, Jumbo 60 Pages, 10 Years Validity, Normal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "adult",
+      "booklet_pages": 60,
+      "validity_years": 10,
+      "scheme": "tatkaal",
+      "amount": 4000,
+      "description": "Fresh Passport (Adult, Jumbo 60 Pages, 10 Years Validity, Tatkaal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "minor_under_15",
+      "booklet_pages": 36,
+      "validity_years": 5,
+      "scheme": "normal",
+      "amount": 1000,
+      "description": "Fresh Passport (Minor Under 15 Years, 36 Pages, 5 Years Validity, Normal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "minor_under_15",
+      "booklet_pages": 36,
+      "validity_years": 5,
+      "scheme": "tatkaal",
+      "amount": 3000,
+      "description": "Fresh Passport (Minor Under 15 Years, 36 Pages, 5 Years Validity, Tatkaal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "minor_15_to_18",
+      "booklet_pages": 36,
+      "validity_years": 10,
+      "scheme": "normal",
+      "amount": 1500,
+      "description": "Fresh Passport (Minor 15-18 Years, 36 Pages, 10 Years Validity, Normal Scheme)"
+    },
+    {
+      "service": "fresh",
+      "applicant_age_group": "minor_15_to_18",
+      "booklet_pages": 36,
+      "validity_years": 10,
+      "scheme": "tatkaal",
+      "amount": 3500,
+      "description": "Fresh Passport (Minor 15-18 Years, 36 Pages, 10 Years Validity, Tatkaal Scheme)"
+    },
+    {
+      "service": "reissue",
+      "reason": "validity_expired",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "normal",
+      "amount": 1500,
+      "description": "Re-issue of Passport (Validity Expired / Due to Expire, 36 Pages, Normal)"
+    },
+    {
+      "service": "reissue",
+      "reason": "validity_expired",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "tatkaal",
+      "amount": 3500,
+      "description": "Re-issue of Passport (Validity Expired / Due to Expire, 36 Pages, Tatkaal)"
+    },
+    {
+      "service": "reissue",
+      "reason": "exhaustion_of_pages",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "normal",
+      "amount": 1500,
+      "description": "Re-issue of Passport (Exhaustion of Pages, 36 Pages, Normal)"
+    },
+    {
+      "service": "reissue",
+      "reason": "exhaustion_of_pages",
+      "applicant_age_group": "adult",
+      "booklet_pages": 60,
+      "scheme": "normal",
+      "amount": 2000,
+      "description": "Re-issue of Passport (Exhaustion of Pages, 60 Pages, Normal)"
+    },
+    {
+      "service": "reissue",
+      "reason": "change_in_personal_particulars",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "normal",
+      "amount": 1500,
+      "description": "Re-issue of Passport (Change in Name / Address / Spouse, 36 Pages, Normal)"
+    },
+    {
+      "service": "reissue",
+      "reason": "lost_damaged",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "normal",
+      "amount": 3000,
+      "description": "Re-issue of Passport (Lost / Damaged Passport, 36 Pages, Normal Scheme)"
+    },
+    {
+      "service": "reissue",
+      "reason": "lost_damaged",
+      "applicant_age_group": "adult",
+      "booklet_pages": 36,
+      "scheme": "tatkaal",
+      "amount": 5000,
+      "description": "Re-issue of Passport (Lost / Damaged Passport, 36 Pages, Tatkaal Scheme)"
+    },
+    {
+      "service": "pcc",
+      "applicant_age_group": "adult",
+      "scheme": "normal",
+      "amount": 500,
+      "description": "Police Clearance Certificate (PCC) Application"
+    },
+    {
+      "service": "surrender",
+      "applicant_age_group": "adult",
+      "scheme": "normal",
+      "amount": 5000,
+      "description": "Surrender Certificate / Renunciation of Indian Citizenship"
+    }
+  ]
+}

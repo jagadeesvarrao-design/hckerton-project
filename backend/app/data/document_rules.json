@@ -1,0 +1,50 @@
+{
+  "categories": {
+    "proof_of_address": [
+      { "code": "AADHAAR", "name": "Aadhaar Card / e-Aadhaar", "strength": "HIGH", "points": 100 },
+      { "code": "ELECTRICITY_BILL", "name": "Electricity Bill (Last 3 Months in Applicant's Name)", "strength": "HIGH", "points": 90 },
+      { "code": "WATER_BILL", "name": "Water Bill (Current Address)", "strength": "MEDIUM", "points": 80 },
+      { "code": "BANK_PASSBOOK", "name": "Photo Passbook of Scheduled Public/Private Sector Bank Account", "strength": "HIGH", "points": 95 },
+      { "code": "RENT_AGREEMENT", "name": "Registered Rent Agreement (Valid 1+ Year)", "strength": "MEDIUM", "points": 75 },
+      { "code": "VOTER_ID", "name": "Election Commission Photo ID Card (EPIC)", "strength": "HIGH", "points": 90 },
+      { "code": "GAS_CONNECTION", "name": "Proof of Gas Connection Bill", "strength": "MEDIUM", "points": 70 },
+      { "code": "SPOUSE_PASSPORT", "name": "Spouse's Passport Copy (First & Last Page with matching address)", "strength": "HIGH", "points": 90 }
+    ],
+    "proof_of_dob": [
+      { "code": "BIRTH_CERTIFICATE", "name": "Birth Certificate issued by Municipal Authority / Registrar of Births", "strength": "HIGHEST", "points": 100 },
+      { "code": "TRANSFER_SCHOOL_CERTIFICATE", "name": "Transfer / School Leaving / Matriculation (10th) Certificate with DOB", "strength": "HIGH", "points": 95 },
+      { "code": "PAN_CARD", "name": "PAN Card issued by Income Tax Department", "strength": "HIGH", "points": 90 },
+      { "code": "AADHAAR_DOB", "name": "Aadhaar Card / e-Aadhaar with Full Verified Date of Birth", "strength": "HIGH", "points": 95 },
+      { "code": "DRIVING_LICENSE", "name": "Driving License issued by RTO/Transport Department", "strength": "MEDIUM", "points": 80 }
+    ],
+    "non_ecr_proof": [
+      { "code": "MATRICULATION_10TH", "name": "Matriculation (10th Standard) or Higher Educational Degree / Marksheet", "description": "All educational certificate holders (10th/12th/Graduation/Post-Graduation)" },
+      { "code": "INCOME_TAX_PAYER", "name": "Income Tax Assessment Order / ITR-V (Proof of Tax Paid for Last 1 Year)", "description": "All individual tax payers with verified ITR acknowledgment" },
+      { "code": "AGE_ABOVE_50", "name": "Proof of Age 50 Years or Above", "description": "Any citizen who has completed 50 years of age" },
+      { "code": "CHILDREN_UNDER_18", "name": "Minor Children Under 18 Years of Age", "description": "All minor children are granted Non-ECR status" },
+      { "code": "GOVT_SERVANT", "name": "Government Servant / PSU Employee Identity Card & NOC", "description": "Central/State government employees and their dependent family members" }
+    ]
+  },
+  "annexures": {
+    "ANNEXURE_D": {
+      "name": "Annexure D (Minor Passport Declaration)",
+      "trigger": "Minor applying for fresh passport with both parents' consent",
+      "required_fields": ["child_name", "father_name", "mother_name", "permanent_address", "passport_number_father", "passport_number_mother"]
+    },
+    "ANNEXURE_E": {
+      "name": "Annexure E (Standard Self-Declaration for Tatkaal / Citizenship)",
+      "trigger": "Standard citizenship & no criminal record declaration for Tatkaal applicants",
+      "required_fields": ["applicant_name", "father_name", "dob", "address", "police_station"]
+    },
+    "ANNEXURE_F": {
+      "name": "Annexure F (Lost / Damaged Passport Affidavit)",
+      "trigger": "Reissue request where previous passport is lost, damaged, or mutilated",
+      "required_fields": ["lost_passport_number", "date_of_issue", "place_of_issue", "fir_number", "fir_date", "police_station"]
+    },
+    "ANNEXURE_J": {
+      "name": "Annexure J (Joint Declaration for Minor with One Parent Abroad)",
+      "trigger": "Minor application where one parent is residing abroad",
+      "required_fields": ["child_name", "resident_parent", "abroad_parent", "foreign_address", "embassy_attestation_status"]
+    }
+  }
+}

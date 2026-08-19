@@ -1,0 +1,60 @@
+{
+  "states": {
+    "Delhi": {
+      "districts": {
+        "New Delhi": [
+          { "thana_code": "DL_ND_01", "thana_name": "Tilak Marg Police Station", "sho_name": "Insp. R. K. Sharma", "contact": "011-23384934", "address": "Tilak Marg, New Delhi - 110001", "pincodes": ["110001", "110002"] },
+          { "thana_code": "DL_ND_02", "thana_name": "Connaught Place Police Station", "sho_name": "Insp. Ajay Singh", "contact": "011-23340000", "address": "Parliament Street, Connaught Place, New Delhi - 110001", "pincodes": ["110001"] },
+          { "thana_code": "DL_ND_03", "thana_name": "Chanakyapuri Police Station", "sho_name": "Insp. Vikram Malik", "contact": "011-24101111", "address": "Nyaya Marg, Chanakyapuri, New Delhi - 110021", "pincodes": ["110021"] }
+        ],
+        "South Delhi": [
+          { "thana_code": "DL_SD_01", "thana_name": "Hauz Khas Police Station", "sho_name": "Insp. Anil Kumar", "contact": "011-26567890", "address": "Aurobindo Marg, Hauz Khas, New Delhi - 110016", "pincodes": ["110016", "110017"] },
+          { "thana_code": "DL_SD_02", "thana_name": "Saket Police Station", "sho_name": "Insp. Manoj Yadav", "contact": "011-29561234", "address": "Press Enclave Road, Saket, New Delhi - 110017", "pincodes": ["110017"] }
+        ]
+      }
+    },
+    "Maharashtra": {
+      "districts": {
+        "Mumbai City": [
+          { "thana_code": "MH_MUM_01", "thana_name": "Colaba Police Station", "sho_name": "Sr. PI S. Patil", "contact": "022-22856789", "address": "Shahid Bhagat Singh Marg, Colaba, Mumbai - 400005", "pincodes": ["400005", "400001"] },
+          { "thana_code": "MH_MUM_02", "thana_name": "Worli Police Station", "sho_name": "Sr. PI V. Deshmukh", "contact": "022-24931234", "address": "Dr. Annie Besant Road, Worli, Mumbai - 400018", "pincodes": ["400018", "400013"] }
+        ],
+        "Pune": [
+          { "thana_code": "MH_PUN_01", "thana_name": "Koregaon Park Police Station", "sho_name": "Sr. PI S. Kadam", "contact": "020-26123456", "address": "North Main Road, Koregaon Park, Pune - 411001", "pincodes": ["411001", "411036"] }
+        ]
+      }
+    },
+    "Karnataka": {
+      "districts": {
+        "Bengaluru Urban": [
+          { "thana_code": "KA_BLR_01", "thana_name": "Koramangala Police Station", "sho_name": "PI Raghavendra M", "contact": "080-22943465", "address": "80 Feet Road, 6th Block, Koramangala, Bengaluru - 560095", "pincodes": ["560034", "560095"] },
+          { "thana_code": "KA_BLR_02", "thana_name": "Indiranagar Police Station", "sho_name": "PI Suresh Gowda", "contact": "080-22943460", "address": "100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru - 560038", "pincodes": ["560038"] }
+        ]
+      }
+    },
+    "Telangana": {
+      "districts": {
+        "Hyderabad": [
+          { "thana_code": "TS_HYD_01", "thana_name": "Begumpet Police Station", "sho_name": "Insp. B. Srinivas", "contact": "040-27853508", "address": "SP Road, Begumpet, Hyderabad - 500003", "pincodes": ["500003", "500016"] },
+          { "thana_code": "TS_HYD_02", "thana_name": "Banjara Hills Police Station", "sho_name": "Insp. K. Nageshwar Rao", "contact": "040-27853540", "address": "Road No. 12, Banjara Hills, Hyderabad - 500034", "pincodes": ["500034"] }
+        ]
+      }
+    },
+    "Tamil Nadu": {
+      "districts": {
+        "Chennai": [
+          { "thana_code": "TN_MAA_01", "thana_name": "Mylapore Police Station", "sho_name": "Insp. K. Ramasamy", "contact": "044-23452580", "address": "Kutchery Road, Mylapore, Chennai - 600004", "pincodes": ["600004"] },
+          { "thana_code": "TN_MAA_02", "thana_name": "T. Nagar Police Station", "sho_name": "Insp. S. Murugan", "contact": "044-23452590", "address": "Usman Road, T. Nagar, Chennai - 600017", "pincodes": ["600017"] }
+        ]
+      }
+    },
+    "Andhra Pradesh": {
+      "districts": {
+        "Visakhapatnam": [
+          { "thana_code": "AP_VIZ_01", "thana_name": "I Town Police Station (One Town)", "sho_name": "Insp. G. Apparao", "contact": "0891-2565100", "address": "Near Town Hall, Velampeta, Visakhapatnam - 530001", "pincodes": ["530001", "530002"] },
+          { "thana_code": "AP_VIZ_02", "thana_name": "MVP Colony Police Station", "sho_name": "Insp. P. Venkat Rao", "contact": "0891-2550100", "address": "Sector 3, MVP Colony, Visakhapatnam - 530017", "pincodes": ["530017"] }
+        ]
+      }
+    }
+  }
+}
